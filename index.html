@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Project</title>
+    <!--<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #74b9ff 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 35px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #1a202c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #718096;
+            margin-top: 4px;
+        }
+
+        /* Cards */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2b6cb0;
+            border-bottom: 2px solid #3182ce;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card-header .icon {
+            font-size: 18px;
+        }
+
+        .section-desc {
+            font-size: 13.5px;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        /* Callout Box (Gradient pink/teal) */
+        .callout-gradient {
+            background: linear-gradient(135deg, #e6fffa 0%, #fff5f5 100%);
+            border-left: 4px solid #f56565;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .callout-gradient h4 {
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .callout-gradient ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .callout-gradient li {
+            font-size: 13px;
+            color: #4a5568;
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+
+        .callout-gradient li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e53e3e;
+        }
+
+        /* Code Block */
+        .code-box {
+            background: #2d3748;
+            color: #f7fafc;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 13px;
+            position: relative;
+            margin: 12px 0;
+            overflow-x: auto;
+        }
+
+        .code-badge {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            background: #e53e3e;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .code-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        /* Table Styling */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .custom-table th {
+            background: #3182ce;
+            color: white;
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+        }
+
+        .custom-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #edf2f7;
+            color: #4a5568;
+        }
+
+        .custom-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        .tag-code {
+            background: #edf2f7;
+            color: #c53030;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .status-badge {
+            color: #38a169;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Formatting Example Box */
+        .formatting-box {
+            border: 2px dashed #63b3ed;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .formatting-box h1 {
+            font-size: 20px;
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .formatting-box h2 {
+            font-size: 15px;
+            color: #2b6cb0;
+            border-bottom: 1px solid #cbd5e0;
+            padding-bottom: 4px;
+            margin: 15px 0 10px 0;
+        }
+
+        .formatting-box p {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .formatting-box ul, .formatting-box ol {
+            padding-left: 20px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        /* Form Styling */
+        .form-container {
+            border: 2px dashed #90cdf4;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f7fafc;
+            margin-top: 15px;
+        }
+
+        .form-container h4 {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            color: #4a5568;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #4a5568;
+            outline: none;
+            background: #fff;
+        }
+
+        .form-group textarea {
+            height: 70px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: #3182ce;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: #2b6cb0;
+        }
+
+        /* Pink Card */
+        .card-pink {
+            background: #ffe3e8;
+            border: none;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .card-pink .card-header {
+            color: #2b6cb0;
+            border-bottom: 2px solid #3182ce;
+        }
+
+        .card-pink h4 {
+            font-size: 13.5px;
+            color: #2d3748;
+            margin: 10px 0 5px 0;
+        }
+
+        .card-pink ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+
+        .card-pink li {
+            font-size: 13px;
+            color: #4a5568;
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 4px;
+        }
+
+        .card-pink li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3182ce;
+        }
+
+        /* Summary / Footer Box */
+        .summary-box {
+            background: linear-gradient(135deg, #5b67ca 0%, #7d52c7 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .summary-box h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .summary-box p {
+            font-size: 12.5px;
+            opacity: 0.9;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+    </style>-->
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>🌐 HTML Learning Project</h1>
+            <p>A comprehensive guide to HTML fundamentals</p>
+        </div>
+
+        <!-- Section 1: What is HTML? -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">🚀</span> What is HTML?
+            </div>
+            <p class="section-desc">HTML stands for HyperText Markup Language. It is the standard markup language for creating Web pages.</p>
+            
+            <div class="callout-gradient">
+                <h4>Key Points:</h4>
+                <ul>
+                    <li>Standard markup language</li>
+                    <li>Describes the structure of a Web page</li>
+                    <li>Consists of a series of elements</li>
+                </ul>
+            </div>
+
+            <p class="section-desc" style="font-weight: 600; margin-top: 10px;">How HTML works:</p>
+            <p class="section-desc">HTML elements tell the browser how to display the content.</p>
+            
+            <div class="code-box">
+                <span class="code-badge">HTML</span>
+                <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+            </div>
+        </div>
+
+        <!-- Section 2: Basic HTML Structure -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">📄</span> Basic HTML Structure
+            </div>
+            <p class="section-desc">Every HTML document has a required structure:</p>
+
+            <div class="code-box">
+                <span class="code-badge">HTML</span>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+
+            <div class="callout-gradient">
+                <h4>Structure Breakdown:</h4>
+                <ul>
+                    <li><span class="tag-code">&lt;!DOCTYPE html&gt;</span> Defines that this document is an HTML5 document</li>
+                    <li><span class="tag-code">&lt;html&gt;</span> The root element of an HTML page</li>
+                    <li><span class="tag-code">&lt;head&gt;</span> Contains meta information about the HTML page</li>
+                    <li><span class="tag-code">&lt;body&gt;</span> Defines the document's body</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: Essential HTML Tags -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">📌</span> Essential HTML Tags
+            </div>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag-code">&lt;h1&gt;-&lt;h6&gt;</span></td>
+                        <td>Defines HTML headings</td>
+                        <td><code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag-code">&lt;p&gt;</span></td>
+                        <td>Defines a paragraph</td>
+                        <td><code>&lt;p&gt;Text&lt;/p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag-code">&lt;a&gt;</span></td>
+                        <td>Defines a hyperlink</td>
+                        <td><code>&lt;a href="#"&gt;Link&lt;/a&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag-code">&lt;img&gt;</span></td>
+                        <td>Defines an image</td>
+                        <td><code>&lt;img src="pic.jpg"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag-code">&lt;ul&gt;/&lt;ol&gt;</span></td>
+                        <td>Defines lists</td>
+                        <td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag-code">&lt;div&gt;</span></td>
+                        <td>Defines a section</td>
+                        <td><code>&lt;div&gt;Content&lt;/div&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 4: Text Formatting -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">✍️</span> Text Formatting
+            </div>
+            
+            <div class="formatting-box">
+                <h1>This is an H1 heading</h1>
+                <h2>Heading 2 Example</h2>
+                <p>This is a standard paragraph with <strong>bold</strong>, <em>italic</em>, <u>underlined</u>, and <code>code</code> text.</p>
+                <p><strong>List Examples:</strong></p>
+                <ul>
+                    <li>Bullet point 1</li>
+                    <li>Bullet point 2</li>
+                </ul>
+                <ol>
+                    <li>Numbered item 1</li>
+                    <li>Numbered item 2</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Section 5: HTML Forms -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">📝</span> HTML Forms
+            </div>
+            <p class="section-desc">Forms are used to collect user input:</p>
+
+            <div class="code-box">
+                <span class="code-badge">HTML</span>
+<pre>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+            </div>
+
+            <div class="form-container">
+                <h4>Contact Us</h4>
+                <form onsubmit="return false;">
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label>Subject:</label>
+                        <select>
+                            <option>Select a subject</option>
+                            <option>General Inquiry</option>
+                            <option>Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message:</label>
+                        <textarea placeholder="Type your message here..."></textarea>
+                    </div>
+                    <button class="btn-submit">Submit Form</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section 6: HTML Attributes -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">🏷️</span> HTML Attributes
+            </div>
+            <p class="section-desc">Attributes provide additional information about elements:</p>
+
+            <div class="code-box">
+                <span class="code-badge">HTML</span>
+<pre>&lt;a href="https://example.com" target="_blank" class="btn"&gt;Visit Site&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description" width="300" height="200"&gt;</pre>
+            </div>
+
+            <div class="callout-gradient">
+                <h4>Common Attributes:</h4>
+                <ul>
+                    <li><span class="tag-code">href</span> - Specifies the URL for a link</li>
+                    <li><span class="tag-code">src</span> - Specifies the path to an image</li>
+                    <li><span class="tag-code">alt</span> - Specifies alternate text for an image</li>
+                    <li><span class="tag-code">class</span> - Specifies class names for elements</li>
+                    <li><span class="tag-code">id</span> - Specifies unique id for an element</li>
+                    <li><span class="tag-code">style</span> - Specifies inline CSS styles</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 7: Media in HTML -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">🖼️</span> Media in HTML
+            </div>
+            <p class="section-desc">HTML supports various media elements:</p>
+
+            <div class="code-box">
+                <span class="code-badge">HTML</span>
+<pre>&lt;img src="pic.jpg" alt="Picture"&gt;
+&lt;audio controls&gt;&lt;source src="audio.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;
+&lt;video width="320" height="240" controls&gt;&lt;source src="movie.mp4"&gt;&lt;/video&gt;</pre>
+            </div>
+
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Media</th>
+                        <th>Tag</th>
+                        <th>Attr</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Images</td>
+                        <td><span class="tag-code">&lt;img&gt;</span></td>
+                        <td>src, alt</td>
+                        <td><span class="status-badge">✔ Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Audio</td>
+                        <td><span class="tag-code">&lt;audio&gt;</span></td>
+                        <td>src, controls</td>
+                        <td><span class="status-badge">✔ Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Video</td>
+                        <td><span class="tag-code">&lt;video&gt;</span></td>
+                        <td>src, controls</td>
+                        <td><span class="status-badge">✔ Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 8: Practical Examples -->
+        <div class="card-pink">
+            <div class="card-header">
+                <span class="icon">💡</span> Practical Examples
+            </div>
+            
+            <h4>Common Tasks:</h4>
+            <ul>
+                <li>Creating a navigation bar using <span class="tag-code">&lt;nav&gt;</span> and <span class="tag-code">&lt;ul&gt;</span></li>
+                <li>Building a simple contact form</li>
+                <li>Making a responsive card layout</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Always use semantic HTML tags</li>
+                <li>Include <span class="tag-code">alt</span> attributes for images</li>
+                <li>Keep HTML clean and properly indented</li>
+                <li>Validate your HTML code</li>
+            </ul>
+        </div>
+
+        <!-- Section 9: Project Structure -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">📁</span> Project Structure
+            </div>
+            <p class="section-desc">Recommended folder layout for web projects:</p>
+
+            <div class="code-box">
+<pre>project-folder/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+└── images/
+    ├── logo.png
+    └── banner.jpg</pre>
+            </div>
+        </div>
+
+        <!-- Section 10: Next Steps in Your Learning Journey -->
+        <div class="callout-gradient" style="border: 1px solid #90cdf4; border-left: 4px solid #3182ce; background: linear-gradient(135deg, #e6fffa 0%, #fff5f5 100%); padding: 20px; border-radius: 12px;">
+            <div style="font-weight: bold; color: #2b6cb0; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                <span>🎯</span> Next Steps in Your Learning Journey
+            </div>
+            <p style="font-size: 13px; font-weight: 600; color: #2d3748; margin-bottom: 8px;">Recommended path:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="font-size: 13px; color: #4a5568; margin-bottom: 4px; padding-left: 15px; position: relative;">• Master CSS for styling and page layout</li>
+                <li style="font-size: 13px; color: #4a5568; margin-bottom: 4px; padding-left: 15px; position: relative;">• Learn JavaScript to add interactivity</li>
+                <li style="font-size: 13px; color: #4a5568; margin-bottom: 4px; padding-left: 15px; position: relative;">• Explore responsive web design principles</li>
+                <li style="font-size: 13px; color: #4a5568; margin-bottom: 4px; padding-left: 15px; position: relative;">• Build real-world projects to solidify skills</li>
+            </ul>
+        </div>
+
+        <!-- Section 11: Developer Tools -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon">🔧</span> Developer Tools
+            </div>
+            <div class="callout-gradient" style="margin: 0;">
+                <h4>Recommended Tools:</h4>
+                <ul>
+                    <li>Code Editor (VS Code, Sublime Text)</li>
+                    <li>Browser Developer Tools (F12)</li>
+                    <li>HTML Validators (W3C)</li>
+                    <li>Extension & Plugins (Live Server)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer / Summary -->
+        <div class="summary-box">
+            <h3><span>🌟</span> Summary & Conclusion</h3>
+            <p>HTML is the backbone of web development. Master these concepts and you'll have a solid foundation for learning CSS and JavaScript!</p>
+            <p style="margin-top: 10px; font-weight: 600;">Keep practicing, build projects, and keep learning!</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
